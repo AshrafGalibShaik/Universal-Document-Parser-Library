@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# C++ build artifacts
+*.obj
+*.o
+*.lib
+*.dll
+*.so
+*.a
+
+# Test artifacts
+.pytest_cache/
+.coverage
+
+# OS-specific
+.DS_Store
+
+# Editor-specific
+.vscode/
+.idea/

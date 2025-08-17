@@ -12,19 +12,15 @@ private:
     
 public:
     py::dict parse_document(const std::string& filename) {
-        try {
-            Document doc = parser.parseDocument(filename);
-            
-            py::dict result;
-            result["content"] = doc.content;
-            result["format"] = doc.format;
-            result["metadata"] = py::cast(doc.metadata);
-            result["pages"] = py::cast(doc.pages);
-            
-            return result;
-        } catch (const std::exception& e) {
-            throw py::runtime_error(e.what());
-        }
+        Document doc = parser.parseDocument(filename);
+        
+        py::dict result;
+        result["content"] = doc.content;
+        result["format"] = doc.format;
+        result["metadata"] = py::cast(doc.metadata);
+        result["pages"] = py::cast(doc.pages);
+        
+        return result;
     }
     
     py::list get_supported_formats() {

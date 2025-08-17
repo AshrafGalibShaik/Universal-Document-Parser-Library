@@ -1,7 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "pybind11>=2.6.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "uni-doc-parser"
-version = "0.1.0"
-description = "Add your description here"
+name = "docparser"
+version = "1.0.0"
+description = "Universal document parser library for Python"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.6"
+license = { text = "MIT License" }
+authors = [
+    { name = "Document Parser Library", email = "ashrafgalibshaik@gmail.com" }
+]
+keywords = ["parser", "document", "pdf", "text", "csv", "json", "xml", "html", "markdown"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: C++",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing",
+    "Topic :: Text Processing :: Markup",
+]
+dependencies = [
+    "pybind11>=2.6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/AshrafGalibShaik/Universal-Document-Parser-Library"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "flake8",
+]

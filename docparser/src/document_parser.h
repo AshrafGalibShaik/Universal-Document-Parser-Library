@@ -42,13 +42,13 @@ protected:
         return buffer.str();
     }
     
-    std::string toLowerCase(const std::string& str) {
+    std::string toLowerCase(const std::string& str) const {
         std::string result = str;
         std::transform(result.begin(), result.end(), result.begin(), ::tolower);
         return result;
     }
     
-    std::string getFileExtension(const std::string& filename) {
+    std::string getFileExtension(const std::string& filename) const {
         size_t dot = filename.find_last_of('.');
         if (dot != std::string::npos) {
             return toLowerCase(filename.substr(dot + 1));
